@@ -25,7 +25,7 @@
     function duplicateRemove(items) {
         let sorted_arr = items.slice().sort();
         let results = [];
-        for (let i = 0; i < sorted_arr.length - 1; i++) {
+        for (let i = 0; i < sorted_arr.length; i++) {
             if (sorted_arr[i-1] != sorted_arr[i] && sorted_arr[i+1] != sorted_arr[i]) {
                 results.push(sorted_arr[i]);
             }
