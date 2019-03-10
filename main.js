@@ -39,7 +39,17 @@
     // и будет преобразовывать её в string с html-кодом, где текст с первой строки должен стать заголовком первого уровня,
     // а все остальные строки должны стать абзацами.
 
+    function splitString(stringToSplit, separator) {
+        let arrayOfStrings = stringToSplit.split(separator);
+        let result = `<h1>${arrayOfStrings[0]}</h1> <p>${arrayOfStrings[1]}</p> <p>${arrayOfStrings[2]}</p> <p>${arrayOfStrings[3]}</p>`;
 
+        return result;
+    }
+
+    let tempestString = 'Hello World!\nАбзац первый\nАбзац второй\nАбзац третий.';
+    let br = '\n';
+
+    console.log(splitString(tempestString, br));
 
 })();
 
