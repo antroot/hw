@@ -6,9 +6,7 @@
 
     'use strict'
 
-    let star = [{x:70, y:5}, {x:90, y: 41}, {x:136, y: 48}, {x:103, y:80}, {x:111, y:126},
-                  {x:70, y:105}, {x:29, y:126}, {x:36, y:80}, {x:5, y:48}, {x:48, y:41}];
-
+    let star = [{x:70, y:5}, {x:90, y: 41}, {x:136, y: 48}, {x:103, y:80}, {x:111, y:126}, {x:70, y:105}, {x:29, y:126}, {x:36, y:80}, {x:5, y:48}, {x:48, y:41}];
     let points = star.map((e) => (`${e.x},${e.y}`)).join(" ");
 
     let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
