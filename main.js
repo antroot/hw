@@ -41,9 +41,16 @@
 
     function splitString(stringToSplit, separator) {
         let arrayOfStrings = stringToSplit.split(separator);
-        let result = `<h1>${arrayOfStrings[0]}</h1> <p>${arrayOfStrings[1]}</p> <p>${arrayOfStrings[2]}</p> <p>${arrayOfStrings[3]}</p>`;
-
-        return result;
+        let result = [];
+        for (let i=0; i < arrayOfStrings.length; i++) {
+            if (i===0) {
+                result.push(`<h1>${arrayOfStrings[i]}</h1>`);
+            }
+            else {
+                result.push(`<p>${arrayOfStrings[i]}</p>`);
+            }
+        }
+        return result.join('\n');
     }
 
     let tempestString = 'Hello World!\nАбзац первый\nАбзац второй\nАбзац третий.';
